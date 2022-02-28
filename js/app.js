@@ -5,10 +5,10 @@ document.addEventListener('DOMContentLoaded',()=>{
 
 }) 
   
-
-
+const boton = document.getElementById('boton')
 function cargarApp(){
   mostrarNotas(Notas = JSON.parse(localStorage.getItem("Notas")))
+
 }
 
 
@@ -17,17 +17,30 @@ let lista = document.querySelector('#lista')
 
 let Notas = [];
 
+
+
+
+
+
+
 function agregarNota() {
-  let nota = texto.value;
+  const nota =texto.value;
+   
 
  
 
   if (nota.length > 0) {
+
+
+    
     Notas.push(new Nota(nota));
     Localstorage();
     mostrarNotas(Notas = JSON.parse(localStorage.getItem("Notas")));
 
     texto.value = '';
+
+
+
   }
   else{
       
@@ -43,10 +56,13 @@ function Localstorage() {
  
 function mostrarNotas() {
   
+if (Notas == null) {
 
+  Notas = [];
+  
+}
 
-   
- 
+else{
   lista.innerHTML = '';
   
  for (elemento of Notas){
@@ -68,6 +84,13 @@ function mostrarNotas() {
   
   
 } 
+  
+}
+  
+
+   
+ 
+  
 }
 
 

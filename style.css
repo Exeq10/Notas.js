@@ -74,6 +74,7 @@ html {
 textarea{
     margin-bottom: 3rem;
     font-size: 1.6rem;
+    background-color: white;
 }
 
 .btn{
@@ -156,3 +157,4 @@ text-align: center;
 
 margin-top: 16rem;
 }
+
